@@ -8,7 +8,7 @@ from datetime import datetime
 import base64
 from jinja2 import Template
 
-st.set_page_config(page_title="Mini Accounting System", layout="wide")
+st.set_page_config(page_title="Sistem Akuntansi Mini By Kelompok 5", layout="wide")
 
 # -------------------------
 # Util helpers
@@ -338,3 +338,4 @@ with tab4:
         html = render_report_html(book)
         b = html.encode('utf-8')
         st.download_button("Download laporan.html", data=b, file_name="laporan_keuangan.html", mime="text/html")
+
