@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 
 st.title("Sistem Akuntansi Mini By Kelompok 5")
-st.write("Aplikasi ini memungkinkan Anda mencatat transaksi, melihat jurnal, dan buku besar setiap akun.")
 
 if "transaksi" not in st.session_state:
     st.session_state.transaksi = pd.DataFrame(columns=[
@@ -53,7 +52,7 @@ if st.session_state.transaksi.empty:
 else:
     st.dataframe(st.session_state.transaksi)
 
-st.subheader("Buku Besar (Ledger) Per Akun")
+st.subheader("Buku Besar Per Akun")
 
 if not st.session_state.transaksi.empty:
     
